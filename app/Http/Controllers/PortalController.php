@@ -26,13 +26,26 @@ class PortalController extends Controller
     {
         $buyers = [
             [
+                'id' => 1,
                 'first_name' => 'foo'
             ],
             [
+                'id' => 2,
                 'first_name' => 'bar'
             ]
         ];
-        return view('portal', compact('buyers'));
+
+        $sellers = [
+            [
+                'id' => 1,
+                'first_name' => 'foo'
+            ],
+            [
+                'id' => 2,
+                'first_name' => 'bar'
+            ]
+        ];
+        return view('portal', compact('buyers', 'sellers'));
     }
 
     /**
@@ -42,9 +55,13 @@ class PortalController extends Controller
      */
     public function create(Request $req)
     {
-        $fields = $req->input('buyer');
+        $fields = $req->input();
 
-        dd($fields);
+        $buyers = array_values($fields);
+        $sellers = array_values($fields);
+
+        // Show JSON example in browser.
+        return $fields;
     }
 
     /**

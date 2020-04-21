@@ -50,30 +50,21 @@
                     </div>
                 </div>
 
-                <h3>Buyer Information</h3>
+                <section class="buyer">
+                    <h3>Buyer Information</h3>
 
-                <div id="buyers-list" data-buyers="{{ json_encode($buyers) }}"></div>
+                    <div id="buyer-list" data-json="{{ json_encode($buyers) }}"></div>
 
-                <button type="button" id="add-buyer">Add a Buyer</button>
+                    <button type="button" id="add-buyer">Add a Buyer</button>
+                </section>
 
-                <h3>Seller Information</h3>
-                <div class="form-row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="First name">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Last name">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Email Address">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Telephone">
-                    </div>
-                </div>
+                <section class="seller">
+                    <h3>Seller Information</h3>
 
+                    <div id="seller-list" data-json="{{ json_encode($sellers) }}"></div>
+
+                    <button type="button" id="add-seller">Add a Seller</button>
+                </section>
 
                 <h3>Buyer's Agent Information</h3>
                 <div class="form-row">
