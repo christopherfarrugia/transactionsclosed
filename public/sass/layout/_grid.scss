@@ -47,7 +47,7 @@ header {
         font-weight:normal;
         font-size: 36px;
     }
-    
+
     & h2 {
         font-size: 24px;
         font-weight:normal;
@@ -114,7 +114,7 @@ header {
                 display: flex;
                 justify-content: center;
                 text-align: left;
-            
+
                 & h3 {
                     text-align: center;
                     font-size: 2.2rem;
@@ -134,7 +134,7 @@ header {
                     width: 400px;
                     background-color: white;
                     padding: 2rem;
-                    -webkit-box-shadow: -3px 7px 15px 5px rgba(0,0,0,0.14); 
+                    -webkit-box-shadow: -3px 7px 15px 5px rgba(0,0,0,0.14);
                     box-shadow: -3px 7px 15px 5px rgba(0,0,0,0.14);
                     margin: 0 auto;
                     display: flex;
@@ -190,7 +190,7 @@ header {
     }
 
     .footer {
-        position: absolute;
+        position: fixed;
         bottom: 0;
         width: 100%;
         /* Set the fixed height of the footer here */
@@ -200,7 +200,7 @@ header {
         overflow: auto;
         padding: 0 1rem;
       }
-      
+
 
 
 

@@ -21,7 +21,8 @@
 
             <h3>Listing Information</h3>
 
-            <form>
+            <form action="/portal" method="post">
+                @csrf
                 <div class="form-group">
                     <label for="inputAddress">Address</label>
                     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
@@ -51,22 +52,9 @@
 
                 <h3>Buyer Information</h3>
 
-                <div class="form-row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="First name">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Last name">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Email Address">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Telephone">
-                    </div>
-                </div>
+                <div id="buyers-list" data-buyers="{{ json_encode($buyers) }}"></div>
+
+                <button type="button" id="add-buyer">Add a Buyer</button>
 
                 <h3>Seller Information</h3>
                 <div class="form-row">
@@ -156,7 +144,11 @@
                         <input type="file" class="form-control">
                     </div>
                 </div>
-          
+
+
+                <div class="form-control">
+                    <input type="submit">Submit</input>
+                </div>
             </form>
 
 

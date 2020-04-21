@@ -9,8 +9,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $testimonials = Testimonial::all()->random(1);
+        $testimonials = Testimonial::all();
         return view('index')->with('testimonials', $testimonials);
     }
-
 }

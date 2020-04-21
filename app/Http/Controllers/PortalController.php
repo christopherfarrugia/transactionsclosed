@@ -24,7 +24,15 @@ class PortalController extends Controller
      */
     public function index()
     {
-        return view('portal');        
+        $buyers = [
+            [
+                'first_name' => 'foo'
+            ],
+            [
+                'first_name' => 'bar'
+            ]
+        ];
+        return view('portal', compact('buyers'));
     }
 
     /**
@@ -32,9 +40,19 @@ class PortalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $req)
     {
-        //
+        //$fields = $req->input('buyer');
+        //$fieldCount = sizeof($fields['first_name']);
+
+        //$buyers = [];
+
+        //// fields => first_name, last_name, etc
+        //foreach($fields as $fieldName => $els) {
+        //    array_push($buyers, [
+        //        'first_name' => [$fieldName]
+        //    ])
+        //}
     }
 
     /**

@@ -24,3 +24,4 @@ Route::get('/', 'IndexController@index')->name('index');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/portal', 'PortalController@index')->name('portals');
+Route::post('/portal', 'PortalController@create')->name('portals.create');

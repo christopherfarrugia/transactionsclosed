@@ -19,7 +19,7 @@ class CreateTestimonialTable extends Migration
             $table->text('author_city');
             $table->text('brokerage');
             $table->text('testimonial');
-            $table->timestamps();        
+            $table->timestamps();
        });
     }
 
@@ -30,8 +30,6 @@ class CreateTestimonialTable extends Migration
      */
     public function down()
     {
-        Schema::table('testimonials', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('testimonials');
     }
 }

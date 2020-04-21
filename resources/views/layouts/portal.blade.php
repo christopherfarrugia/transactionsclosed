@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>Transaction Coordinators for Real Estate Agents and Realtors | TransactionsClosed</title>
 
@@ -18,11 +19,12 @@
 @include('includes.portal_header')
 
 @yield('content')
-    
+
 <footer class="footer">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, expedita du.</p>
 </footer>
 
 
+<script src="/js/app.js"></script>
 </body>
 </html>
