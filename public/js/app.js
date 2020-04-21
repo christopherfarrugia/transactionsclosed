@@ -23,18 +23,18 @@ const buyerView = function(buyer, id) { // null == boom
     el.innerHTML = `
 <div class="form-row">
     <div class="col">
-        <input name="buyer[first_name][]" value="${buyer.first_name || ''}" type="text" class="form-control" placeholder="First name">
+        <input name="buyer[${id}][first_name]" value="${buyer.first_name || ''}" type="text" class="form-control" placeholder="First name">
     </div>
     <div class="col">
-        <input name="buyer[last_name][]" value="${buyer.last_name || ''}" type="text" class="form-control" placeholder="Last name">
+        <input name="buyer[${id}][last_name]" value="${buyer.last_name || ''}" type="text" class="form-control" placeholder="Last name">
     </div>
 </div>
 <div class="form-row">
     <div class="col">
-        <input name="buyer[email][]" value="${buyer.email || ''}" type="text" class="form-control" placeholder="Email Address">
+        <input name="buyer[${id}][email]" value="${buyer.email || ''}" type="text" class="form-control" placeholder="Email Address">
     </div>
     <div class="col">
-        <input name="buyer[telephone][]" value="${buyer.telephone || ''}" type="text" class="form-control" placeholder="Telephone">
+        <input name="buyer[${id}][telephone]" value="${buyer.telephone || ''}" type="text" class="form-control" placeholder="Telephone">
     </div>
 </div>
 <button type="button" class="delete-row" data-id="${id}">X</button>

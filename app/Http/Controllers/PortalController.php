@@ -42,17 +42,9 @@ class PortalController extends Controller
      */
     public function create(Request $req)
     {
-        //$fields = $req->input('buyer');
-        //$fieldCount = sizeof($fields['first_name']);
+        $fields = $req->input('buyer');
 
-        //$buyers = [];
-
-        //// fields => first_name, last_name, etc
-        //foreach($fields as $fieldName => $els) {
-        //    array_push($buyers, [
-        //        'first_name' => [$fieldName]
-        //    ])
-        //}
+        dd($fields);
     }
 
     /**
