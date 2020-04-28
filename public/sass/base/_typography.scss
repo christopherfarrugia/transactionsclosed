@@ -1,0 +1,61 @@
+    body {
+        font-family: proxima-nova, sans-serif;
+        font-size: 18px;
+        color: $grey6;
+    }
+    
+    p {
+        margin-bottom: 1.6rem;
+    }
+    
+    hr {
+        border-color: $grey5;
+        background-color: #fff;
+        margin: 2rem auto;
+        opacity: .2;
+    }
+    
+    label {
+        display: inline-block;
+        margin-bottom: .5rem;
+        color: $grey5;
+    }
+    
+    #hero h2 {
+        overflow-wrap: break-word;
+    }
+    
+    #testimonials p {
+        margin-bottom: .5rem;
+    }
+    
+    #navbarText {
+        margin-left: 1.5rem;
+        font-size: .9rem;
+    }
+    
+    #hero h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: $blue5;
+    }
+    
+    #hero h2 {
+        font-size: 1.4rem;
+    }
+    
+    .stepnumber {
+        font-weight: bold;
+        display: auto;
+        font-size: 1.4rem;
+        background-color: $green5;
+        color: white;
+        padding: 1rem;
+        border-radius: 50%;
+    }
+    
+    .card-subtitle {
+        color: $bluegreen5;
+        font-size: 2.0rem;
+        font-weight: bold;
+    }
