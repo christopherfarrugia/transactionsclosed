@@ -1,37 +1,45 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a href="/"><img class="top-menu-logo" src="/img/logo-small.png"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Why Use Us<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">What We Do</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-            </ul>
+ <header>
+     <div class="container">
+         <div class="top-menu">
+             <div>
+                 <a href="/"><img class="top-menu-logo" src="/img/logo.png"></a>
+             </div>
+             <!-- <div class="top-menu-links">
+                 <a href="">why use us</a>
+                 <a href="">pricing</a>
+                 <a href="">What we do</a>
+                 <a href="">testimonials</a>
+                 <a href="">contact us</a>
+             </div>
+             <button class="btn btn-green" data-toggle="modal" data-target="#SignUpModalCenter">Get Started</button> -->
+
+             <!-- @guest
             <div class="top-menu-buttons">
                 <a href="/login">login</a>
                 @if (Route::has('register'))
-                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                 @endif
             </div>
+                    @else
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
 
-        </div>
-    </div>
-</nav>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
 
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest -->
 
+         </div>
+     </div>
+ </header>

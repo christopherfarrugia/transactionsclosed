@@ -25,9 +25,6 @@
         <div class="">
             <h2>contact</h2>
             <p>(239) 248-8171</p>
-
-            <p>123 Main Street<br />
-            Naples, FL 34110</p>
         </div>
 
     </div>

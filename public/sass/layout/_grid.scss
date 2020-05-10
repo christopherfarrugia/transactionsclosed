@@ -1,7 +1,8 @@
 .container {
     padding: 4rem 0;
     margin: 0 auto;
-    width: 1170px;
+    max-width: 1170px;
+    width: 100%;
 }
 
 .mb1 {
@@ -26,6 +27,7 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1rem auto;
+
     & .container {
         padding: 1rem auto;
     }
@@ -38,17 +40,17 @@ header {
     background-size: cover;
     align-items: center;
     padding: 3rem 0;
+    padding: 4rem;
     @media only screen and (max-width: 479px) {
-        #hero {
-            background: none;
-            background-color: red;
-        }
+        background: none;
     }
+
     & .get-started-button {
         background-image: linear-gradient(to right, $green3, $green4);
         color: white;
     }
 }
+
 
 #how-it-works {
     & .container {
@@ -56,19 +58,28 @@ header {
         align-items: center;
         padding: 6rem 0;
     }
+
     & img {
-        width: 500px;
+        max-width: 500px;
+        width: 100%;
         background-color: orange;
         height: auto;
         margin-right: 2rem;
+
+        @media only screen and (max-width: 479px) {
+            display: none;
+        }
     }
+
     & .text {
         width: 70%;
     }
+
     & .steps {
         display: flex;
         text-align: center;
     }
+
     & .number {
         font-weight: bold;
         color: white;
@@ -77,35 +88,46 @@ header {
         margin: 0;
         border-radius: 50%;
     }
+
     .step1,
     .step2 {
         border-right: 1px solid #e3e3e3;
+    }
+
+    @media only screen and (max-width: 479px) {
+        text-align: center;
     }
 }
 
 #pricing {
     background: url('/img/layout/grey-background.jpg');
+
     & .container {
         text-align: center;
         justify-content: center;
         margin: 0 auto;
         padding: 6rem 0;
+
         & .pricing-tables {
             display: flex;
             justify-content: center;
             text-align: left;
+
             & h3 {
                 text-align: center;
                 font-size: 2.2rem;
             }
+
             & p {
                 font-weight: bold;
                 font-size: 1.5rem;
                 text-align: center;
             }
+
             & li {
                 margin-bottom: .75rem;
             }
+
             & .pricing-table {
                 width: 400px;
                 background-color: white;
@@ -117,16 +139,28 @@ header {
                 flex-direction: column;
                 justify-content: flex-end;
             }
+
             & .pricing-table:nth-child(2) {
                 margin: 0 2rem;
             }
+
             & .pricing {
                 color: $green5;
             }
+
+
+        }
+
             & .btn {
                 align-items: flex-end;
+                margin-top: auto;
             }
-        }
+
+            & .card-body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
     }
 }
 
@@ -136,6 +170,7 @@ header {
     font-size: 2rem;
     color: white;
     padding: 4rem 0;
+
     & cite {
         color: $green3;
         font-size: 1.5rem;

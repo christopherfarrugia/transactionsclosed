@@ -7,8 +7,9 @@
         <div class="row">
             <div class="col-xs-12 px-3">
                 <h1>Selling Real Estate Just Got Easier</h1>
-                <h2>Our U.S. based transaction coordinators handle contract to close so you can focus on prospecting.</h2>
-                <button class="btn btn-green">Get Started</button>
+                <h2>Our U.S. based transaction coordinators handle contract to close so you can focus on prospecting.
+                </h2>
+                <button class="btn btn-green" data-toggle="modal" data-target="#SignUpModalCenter">Get Started</button>
             </div>
             <div class="col-xs-6"></div>
         </div>
@@ -24,8 +25,9 @@
                 <img src="img/layout/house-for-sale.png" alt="house-for-sale" class="img-fluid">
             </div>
             <div class="col-md-6">
-                <h3>How Does it Work?</h3>
-                <p>Quickly and easily set up a new transaction with our streamlined process. We begin working as soon as
+                <h3 class="text-center">How Does it Work?</h3>
+                <p class="text-center">Quickly and easily set up a new transaction with our streamlined process. We
+                    begin working as soon as
                     your contract is uploaded.</p>
                 <hr>
 
@@ -60,12 +62,12 @@
                 <h2>Transaction Coordinator Pricing</h2>
                 <h3>Take these tasks off of your plate and get back to selling.</h3>
             </div>
-</div>
-<div class="row">
+        </div>
+        <div class="row">
             <div class="card col-md-12 col-sm-12 col-lg-4">
                 <div class="card-body">
                     <h3 class="card-title">Buyer Side</h3>
-                    <h6 class="card-subtitle m-2">$195</h6>
+                    <h6 class="card-subtitle m-2">$245</h6>
                     <ul class="text-left">
                         <li>Track all contract deadlines</li>
                         <li>Communicate each step of the way</li>
@@ -81,7 +83,8 @@
                         <li>Ensure closing agent receives all paperwork</li>
                     </ul>
 
-                    <button class="btn btn-green">Get Started</button>
+                    <button class="btn btn-green" data-toggle="modal" data-target="#SignUpModalCenter">Get
+                        Started</button>
                 </div>
             </div>
             <div class="card col-md-12 col-sm-12 col-lg-4 shadow">
@@ -105,7 +108,8 @@
                         <li>Notify agent of missing paperwork </li>
                         <li>Ensure closing agent receives all paperwork </li>
                     </ul>
-                    <button class="btn btn-green">Get Started</button>
+                    <button class="btn btn-green" data-toggle="modal" data-target="#SignUpModalCenter">Get
+                        Started</button>
                 </div>
             </div>
             <div class="card col-md-12 col-sm-12 col-lg-4">
@@ -127,7 +131,8 @@
                         <li>Notify agent of missing paperwork </li>
                         <li>Ensure closing agent receives all paperwork </li>
                     </ul>
-                    <button class="btn btn-green">Get Started</button>
+                    <button class="btn btn-green" data-toggle="modal" data-target="#SignUpModalCenter">Get
+                        Started</button>
                 </div>
             </div>
         </div>
@@ -135,7 +140,63 @@
 </section>
 
 
+<section id="testimonials">
+    @foreach ($testimonials as $testimonial)
+    <div class="container">
+        <p>"{{ $testimonial->testimonial }}"</p>
+        <cite>{{ $testimonial->author }}, {{ $testimonial->author_city }}</cite>
+    </div>
+    @endforeach
+</section>
 
 
+<!-- Modal -->
+<div class="modal fade" id="SignUpModalCenter" tabindex="-1" role="dialog" aria-labelledby="SignUpModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="SignUpModalLongTitle">Create a New Transaction</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+
+                <form action="" method="post" id="CreateNewTransaction">
+                    @csrf
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" name="firstname" placeholder="Your First name" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" name="lastname" placeholder="Your Last name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" name="emailaddress" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" name="telephone" placeholder="Telephone Number" required>
+                        </div>
+                    </div>
+                </form>
+
+
+
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-green" form="CreateNewTransaction">Create Transaction</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 @endsection

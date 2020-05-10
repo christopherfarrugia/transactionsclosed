@@ -612,7 +612,8 @@ label {
 .container {
   padding: 4rem 0;
   margin: 0 auto;
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%;
 }
 
 .mb1 {
@@ -647,11 +648,11 @@ header .container {
   background-size: cover;
   align-items: center;
   padding: 3rem 0;
+  padding: 4rem;
 }
 @media only screen and (max-width: 479px) {
-  #hero #hero {
+  #hero {
     background: none;
-    background-color: red;
   }
 }
 #hero .get-started-button {
@@ -665,10 +666,16 @@ header .container {
   padding: 6rem 0;
 }
 #how-it-works img {
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   background-color: orange;
   height: auto;
   margin-right: 2rem;
+}
+@media only screen and (max-width: 479px) {
+  #how-it-works img {
+    display: none;
+  }
 }
 #how-it-works .text {
   width: 70%;
@@ -688,6 +695,11 @@ header .container {
 #how-it-works .step1,
 #how-it-works .step2 {
   border-right: 1px solid #e3e3e3;
+}
+@media only screen and (max-width: 479px) {
+  #how-it-works {
+    text-align: center;
+  }
 }
 
 #pricing {
@@ -733,8 +745,14 @@ header .container {
 #pricing .container .pricing-tables .pricing {
   color: #259d58;
 }
-#pricing .container .pricing-tables .btn {
+#pricing .container .btn {
   align-items: flex-end;
+  margin-top: auto;
+}
+#pricing .container .card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #testimonials {
